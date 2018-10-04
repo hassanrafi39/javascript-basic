@@ -1,0 +1,114 @@
+To declare variable 
+var varName; 
+or
+var varName = “value”;
+
+To assign a value to variable 
+varName  = “value”;
+
+To find the length of a variable 
+varName.length;
+
+To call a specific letter from variable
+varName  = “value”;
+varName[1] //It will output a;
+note: it wont change the original value;
+
+To find the last character of a variable 
+varName[varName.length - 1];
+
+To cuse concatanation
+var varName = “My ”+”name ”+”is”+” ”+nameVar;
+Note: to concatante ar array we do not have to use + sign, cause any new value just push the array. We can use this only for strings
+var myList ;
+myList = [["Chocolate Bar", 15], 
+myList = ["Candy", 200], 
+myList = ["Ice cream", 100], 
+myList = ["Foam candy", 300], 
+myList = ["Jelly bean", 150]]; 
+
+var list;
+list = "This is";
+list += " a"
+
+To ad a new value at the end of the array
+var arr = [[50, 11, 43], [43, 45, 33]];
+arr.push([11, 18, 20]);  //it will ad last data in arr
+
+To ad a new value at the start of the array
+var arr = [[50, 11, 43], [43, 45, 33]];
+arr.unshift([11, 18, 20]); // it will ad first data in arr
+
+To Remove the last value of the array
+var arr = [[50, 11, 43], [43, 45, 33]];
+var newArr = arr.pop(); //It will not remove the last value from the arr but also assign it to newArr. To only remove the last value we could write arr.pop();
+
+To Remove the first value of the array
+var arr = [[50, 11, 43], [43, 45, 33]];
+var newArr = arr.shift(); //It will not remove the first value from the arr but also assign it to newArr. To only remove the first value we could write arr.pop();
+
+To declare variable. local and global schope
+any variable dieclared without the var keyword is global whether its declare in a function or above all the function. But declaring var keyword is good practice. 
+In a function if we use var keyword its local and can not be used out side of that fuction scope. If a local function called by the same name of a global varibale it will override the globar variable just in the fuction scope.
+var aVar = 3; 	//This is also global
+function functionName() {
+myVar = “Something”;		//This is global
+var anotherVar = “Something”;	//This is local not global
+var aVar = 4;			//The result will be 4
+}
+consloe.log(aVar); This will still be 4
+
+To show an full array link php print_r
+var arr = [1, 2, ,3, 4, 5];
+conslole.log(JSON.stringify(arr));
+
+Switch satatement 
+var val = 1;
+var result;
+switch(val) {
+case 1:
+	result = “One”;
+	break;
+case 2:
+	result = “Two”;
+case 3:
+	result = “Three”;
+	break;
+case 4:
+case 5:
+case 6:
+	result = “High”;
+	break;
+}
+Here the switch first check the value of val. Then it matches with eatch case statement. If the match happen then do what is under till the break. But if the break is omited then it will execute the next statement to whether the case matched or not.
+In the above example if the val is 2 the result will be “Three”. And if the value is between 4-6 the result will be “High”.
+
+Returning true or false 
+function isEqual(a,b) {
+  if (a === b) {
+    return true;
+  } else {
+    return false;
+  }
+}
+But there's a better way to do this. Since ===returns true or false, we can return the result of the comparison:
+function isEqual(a,b) {
+  return a === b;
+}
+
+Javascript objects
+var cat = {
+  "name": "Whiskers",
+  "legs": 4,
+  "tails": 1,
+  "enemies": ["Water", "Dogs"]
+};
+In this example, all the properties are stored as strings, such as - "name", "legs", and "tails". However, you can also use numbers as properties. You can even omit the quotes for single-word string properties, as follows:
+var anotherObject = {
+  make: "Ford",
+  5: "five",
+  "model space": "focus"
+};
+However, if your object has any non-string properties, JavaScript will automatically typecast them as strings. Note that property names with spaces in them must be in quotes (single or double).
+Accessing object properties
+if the object have double quote we have to call it with double quote.
